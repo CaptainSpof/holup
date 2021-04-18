@@ -1,0 +1,14 @@
+#+TITLE: Holup
+
+Holup, did you just… You sure about that ? Think about it…
+
+`holup` is a simple CLI tool that prompt a message asking for confirmation before running a command.
+
+#+begin_src bash
+holup reboot
+#+end_src
+
+#+begin_src bash
+Wait, let's talk!
+Are you sure you want to run: reboot ? (Y/n)
+#+end_src
