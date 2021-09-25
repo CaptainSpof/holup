@@ -1,0 +1,81 @@
+
+[[commands]]
+name = "update-rust-overlay"
+category = "flake"
+command = "nix flake lock --update-input rust-overlay"
+help = "update rust overlay"
+
+[[commands]]
+name = "update-naersk"
+category = "flake"
+command = "nix flake lock --update-input naersk"
+help = "update naersk overlay"
+
+[[commands]]
+name = "update-nixpkgs"
+category = "flake"
+command = "nix flake lock --update-input nixpkgs"
+help = "update nixpkgs channel"
+
+[[commands]]
+name = "update-all"
+category = "flake"
+command = "nix flake update"
+help = "update all channels"
+
+
+[[commands]]
+name = "holup"
+command = '''
+          ./target/debug/holup "$@"
+        '''
+help = "run holup"
+category = "holup"
+
+[[commands]]
+name = "test-it"
+command = '''
+          cargo test
+        '''
+help = "test holup"
+category = "dev"
+
+[[commands]]
+name = "bench-it"
+command = '''
+          cargo bench
+        '''
+help = "bench holup"
+category = "dev"
+
+[[commands]]
+name = "format-it"
+command = '''
+          cargo fmt
+        '''
+help = "format holup"
+category = "dev"
+
+[[commands]]
+name = "build-it"
+command = '''
+          cargo build
+        '''
+help = "build holup"
+category = "dev"
+
+[[commands]]
+name = "dock-it"
+command = '''
+          nix build .#dockerImage && docker load < result
+        '''
+help = "create a docker container for holup"
+category = "dev"
+
+[[commands]]
+name = "run-it"
+command = '''
+          cargo run
+        '''
+help = "run holup"
+category = "dev"
